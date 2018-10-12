@@ -149,13 +149,7 @@ public class Main extends javax.swing.JFrame {
                 mainPane.add(extraCurricular);
                 extraCurricular.show();
                 break;
-            case Manager.fee:
-                setTitle(" Manage fee");
-                fee = new fee(WIDTH, HEIGHT);
-                refreshMainPane();
-                mainPane.add(fee);
-                fee.show();
-                break;
+            
             case Manager.MARK:
                 setTitle("Manage Mark");
                 ListMark searchMark = new ListMark(WIDTH, HEIGHT);
