@@ -57,6 +57,8 @@ public abstract class Manager {
     public static final int DEPARTMENT = 6;
     public static final int EXTRA_CURRICULAR = 7;
     public static final int MARK=8;
+    public static final int fee=9;
+
 
     public int executeManySQL(List<String> listSQL) {
         Connection connect = null;

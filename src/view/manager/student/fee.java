@@ -5,6 +5,9 @@
  */
 package view.manager.student;
 
+import controller.Manager;
+import entity.ExtraCurricularEntity;
+import entity.StudentEntity;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import view.home.UIInterface;
 import java.sql.Connection;
@@ -13,6 +16,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import static view.home.Main.HEIGHT;
+import static view.home.Main.WIDTH;
 
 
 
@@ -23,12 +29,12 @@ public class fee extends javax.swing.JFrame  {
     
     public fee() {
         initComponents();
+     
+    }       
+      public fee(int w, int h ) {
+      }
     
-       
     
-        
-    }        // TODO add your handling code here:
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -272,6 +278,12 @@ public class fee extends javax.swing.JFrame  {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         new view.manager.student.EditFee().setVisible(true);
+        
+        fee jButton4 = new fee(WIDTH, HEIGHT);
+                refreshjTable();
+                jTable.add(jButton4);
+                jButton4.show(); 
+              
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -358,6 +370,12 @@ public class fee extends javax.swing.JFrame  {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
+ 
+    private void refreshjTable() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    
+    }
 }
 
 

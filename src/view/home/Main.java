@@ -149,13 +149,7 @@ public class Main extends javax.swing.JFrame {
                 mainPane.add(extraCurricular);
                 extraCurricular.show();
                 break;
-            case Manager.fee:
-                setTitle(" Manage fee");
-                fee = new fee(WIDTH, HEIGHT);
-                refreshMainPane();
-                mainPane.add(fee);
-                fee.show();
-                break;
+            
             case Manager.MARK:
                 setTitle("Manage Mark");
                 ListMark searchMark = new ListMark(WIDTH, HEIGHT);
@@ -163,6 +157,16 @@ public class Main extends javax.swing.JFrame {
                 mainPane.add(searchMark);
                 searchMark.show(); 
             default:
+                break;
+                case Manager.fee:
+                setTitle("Manage fee");
+                fee searchfee = new fee(WIDTH, HEIGHT);
+                refreshMainPane();
+                mainPane.add(searchfee);
+                searchfee.show(); 
+                
+                
+            
                 break;
         }
     }
@@ -257,6 +261,7 @@ public class Main extends javax.swing.JFrame {
         jMenuItem12 = new javax.swing.JMenuItem();
         mnAbout = new javax.swing.JMenuItem();
         muFee = new javax.swing.JMenu();
+        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -550,6 +555,16 @@ public class Main extends javax.swing.JFrame {
                 muFeeActionPerformed(evt);
             }
         });
+
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem1.setText("View List");
+        jCheckBoxMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem1ActionPerformed(evt);
+            }
+        });
+        muFee.add(jCheckBoxMenuItem1);
+
         jMenuBar2.add(muFee);
         muFee.getAccessibleContext().setAccessibleParent(muFee);
 
@@ -678,10 +693,15 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_muMarkActionPerformed
 
+    private void jCheckBoxMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem1ActionPerformed
+        showComponent(Manager.fee) ;
+    }//GEN-LAST:event_jCheckBoxMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;

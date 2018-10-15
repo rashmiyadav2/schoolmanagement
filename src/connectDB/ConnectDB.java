@@ -23,7 +23,7 @@ public class ConnectDB {
         Connection connect=null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connect=DriverManager.getConnection("jdbc:mysql://"+sdb.getServer()+":"+sdb.getPort()+"/SchoolManagement", sdb.getUsrn(), sdb.getPswd());
+            connect=DriverManager.getConnection("jdbc:mysql://"+sdb.getServer()+":"+sdb.getPort()+"/schoolmanagement", sdb.getUsrn(), sdb.getPswd());
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(ConnectDB.class.getName()).log(Level.SEVERE, null, ex);
         }
