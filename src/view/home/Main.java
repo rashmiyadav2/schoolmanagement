@@ -88,6 +88,7 @@ public class Main extends javax.swing.JFrame {
         muExtraCurricular.setVisible(true);
         muBatch.setVisible(true);
         muBatch.setVisible(true);
+        muFee.setVisible(true);
         }
     }
 
